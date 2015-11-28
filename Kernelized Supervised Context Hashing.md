@@ -26,10 +26,15 @@ In this work, the kernel formulation is employed to tackle the high-dimensional 
 <ul>
 <li>上下文</li>
 <li>kernel</li>
-<li>模型优化<br>
-摘要没有围绕这三点来写，而仅仅只是围绕上下文在说，而且上下文信息只是利用高斯分布对原始的hash codes做加权。</li>
+<li>模型优化</li>
 </ul>
 </li>
+</ol>
+<blockquote>
+<p>摘要没有围绕这三点来写，而仅仅只是围绕上下文在说，而且上下文信息只是利用高斯分布对原始的hash codes做加权。<br>
+建议从提出的问题, 到观察的现象,到问题的求解都要围绕着三个问题说到.</p>
+</blockquote>
+<ol start="2">
 <li>Hamming affinity 的意思我不是很明白？我觉得主要是最后一个 测度度量（metric measure）的问题。</li>
 <li>主动的语句有些多；</li>
 <li>副词应该放在句子最后；</li>
