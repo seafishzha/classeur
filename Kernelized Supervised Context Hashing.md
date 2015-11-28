@@ -1,4 +1,13 @@
 <h1 id="kernelized-supervised-context-hashing">Kernelized Supervised Context Hashing</h1>
+<p><strong>摘要要说明的几个问题:</strong></p>
+<ol>
+<li>要解决的问题是什么?</li>
+<li>我们观察到的现象是什么?</li>
+<li>idea是什么:用一句简单精炼的话来的描述</li>
+<li>我们的采用的方法是什么:具体步骤,如何实现?</li>
+<li>通过<em>对比实验</em>来<strong>验证</strong>我们这个方法的优越性, <strong>佐证</strong>提出的理论和方法的正确性.</li>
+</ol>
+<hr>
 <p><strong>Abstract:</strong></p>
 <p>Most existing supervised hashing methods formulate hashing learning based on the Hamming affinity calculated by inner product of binary codes, which assume that all hashing bits are irrelevant.</p>
 <blockquote>
@@ -22,7 +31,7 @@ In this work, the kernel formulation is employed to tackle the high-dimensional 
 <hr>
 <p>问题：</p>
 <ol>
-<li>论文的两个关键的创新点：
+<li>论文的三个关键的创新点：
 <ul>
 <li>上下文</li>
 <li>kernel</li>
