@@ -25,14 +25,14 @@ December 1, 2015 5:37 PM</p>
 <p>KCF=ridge regression + Circulant data</p>
 </blockquote>
 <p><strong>ridge regression</strong><br>
-<script type="math/tex; mode=display" id="MathJax-Element-45">
+<script type="math/tex; mode=display" id="MathJax-Element-133">
 \min_\mathbb w \sum_i(f(\mathbb x_i) -y_i)^2+\lambda ||\mathbb w||^2
 </script><br>
-<script type="math/tex; mode=display" id="MathJax-Element-46">
+<script type="math/tex; mode=display" id="MathJax-Element-134">
 \mathbb w =(X^TX + \lambda I)^{-1}X^Ty
 </script></p>
 <p><strong>Circulant data</strong><br>
-<script type="math/tex; mode=display" id="MathJax-Element-47">
+<script type="math/tex; mode=display" id="MathJax-Element-135">
 C(u)v= \mathcal F^{-1}(\mathcal F(u)\odot\mathcal F(v))
 </script></p>
 <blockquote>
@@ -40,86 +40,86 @@ C(u)v= \mathcal F^{-1}(\mathcal F(u)\odot\mathcal F(v))
 </blockquote>
 <hr>
 <p><strong>1. 卷积定理</strong></p>
-<p>Given: $<script type="math/tex; mode=display" id="MathJax-Element-48">\mathbf x = [x_1,x_2,x_3]</script>$, $<script type="math/tex; mode=display" id="MathJax-Element-49">\mathbf x' = [x'_1,x'_2,x'_3]</script>$</p>
-<p><script type="math/tex; mode=display" id="MathJax-Element-50">
+<p>Given: $<script type="math/tex; mode=display" id="MathJax-Element-136">\mathbf x = [x_1,x_2,x_3]</script>$, $<script type="math/tex; mode=display" id="MathJax-Element-137">\mathbf x' = [x'_1,x'_2,x'_3]</script>$</p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-138">
 corr(\mathbf x, \mathbf x')  = \mathcal F(\mathbf x)\odot \mathcal F(\mathbf x')
 </script></p>
 <table>
 <thead>
 <tr>
 <th>0</th>
-<th><script type="math/tex" id="MathJax-Element-51">x'_1</script></th>
-<th><script type="math/tex" id="MathJax-Element-52">x'_2</script></th>
-<th><script type="math/tex" id="MathJax-Element-53">x'_3</script></th>
+<th><script type="math/tex" id="MathJax-Element-139">x'_1</script></th>
+<th><script type="math/tex" id="MathJax-Element-140">x'_2</script></th>
+<th><script type="math/tex" id="MathJax-Element-141">x'_3</script></th>
 <th>0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0</td>
-<td><script type="math/tex" id="MathJax-Element-54">x_1</script></td>
-<td><script type="math/tex" id="MathJax-Element-55">x_2</script></td>
-<td><script type="math/tex" id="MathJax-Element-56">x_3</script></td>
+<td><script type="math/tex" id="MathJax-Element-142">x_1</script></td>
+<td><script type="math/tex" id="MathJax-Element-143">x_2</script></td>
+<td><script type="math/tex" id="MathJax-Element-144">x_3</script></td>
 <td>0</td>
 </tr>
 <tr>
-<td><script type="math/tex" id="MathJax-Element-57">x_1</script></td>
-<td><script type="math/tex" id="MathJax-Element-58">x_2</script></td>
-<td><script type="math/tex" id="MathJax-Element-59">x_3</script></td>
+<td><script type="math/tex" id="MathJax-Element-145">x_1</script></td>
+<td><script type="math/tex" id="MathJax-Element-146">x_2</script></td>
+<td><script type="math/tex" id="MathJax-Element-147">x_3</script></td>
 <td>0</td>
 <td>0</td>
 </tr>
 <tr>
-<td><script type="math/tex" id="MathJax-Element-60">x_2</script></td>
-<td><script type="math/tex" id="MathJax-Element-61">x_3</script></td>
+<td><script type="math/tex" id="MathJax-Element-148">x_2</script></td>
+<td><script type="math/tex" id="MathJax-Element-149">x_3</script></td>
 <td>0</td>
 <td>0</td>
-<td><script type="math/tex" id="MathJax-Element-62">x_1</script></td>
+<td><script type="math/tex" id="MathJax-Element-150">x_1</script></td>
 </tr>
 <tr>
-<td><script type="math/tex" id="MathJax-Element-63">x_3</script></td>
+<td><script type="math/tex" id="MathJax-Element-151">x_3</script></td>
 <td>0</td>
 <td>0</td>
-<td><script type="math/tex" id="MathJax-Element-64">x_1</script></td>
-<td><script type="math/tex" id="MathJax-Element-65">x_2</script></td>
+<td><script type="math/tex" id="MathJax-Element-152">x_1</script></td>
+<td><script type="math/tex" id="MathJax-Element-153">x_2</script></td>
 </tr>
 <tr>
 <td>0</td>
 <td>0</td>
-<td><script type="math/tex" id="MathJax-Element-66">x_1</script></td>
-<td><script type="math/tex" id="MathJax-Element-67">x_2</script></td>
-<td><script type="math/tex" id="MathJax-Element-68">x_3</script></td>
+<td><script type="math/tex" id="MathJax-Element-154">x_1</script></td>
+<td><script type="math/tex" id="MathJax-Element-155">x_2</script></td>
+<td><script type="math/tex" id="MathJax-Element-156">x_3</script></td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p><script type="math/tex; mode=display" id="MathJax-Element-69">
+<p><script type="math/tex; mode=display" id="MathJax-Element-157">
 corr(\mathbf x, \mathbf y)  = \mathcal F( \tilde {\mathbf x})\odot  \mathcal F(\tilde{\mathbf y})
 </script></p>
 </blockquote>
 <hr>
 <p><strong>2. Training</strong><br>
-<script type="math/tex; mode=display" id="MathJax-Element-70">
+<script type="math/tex; mode=display" id="MathJax-Element-158">
 \mathcal F({\mathbf w}) = \frac{\mathcal F(\mathbf x) \odot \mathcal F(\mathbf y)}{\mathcal F(\mathbf x) \odot \mathcal F(\mathbf x) + \lambda }
 </script></p>
 <hr>
 <p><strong>3. testing</strong><br>
-<script type="math/tex; mode=display" id="MathJax-Element-71">
+<script type="math/tex; mode=display" id="MathJax-Element-159">
 \mathbf y'=\mathcal F^{-1}(\mathcal F(\mathbf w) \odot \mathcal F(\mathbf x') )
 </script></p>
-<p><script type="math/tex; mode=display" id="MathJax-Element-72">
+<p><script type="math/tex; mode=display" id="MathJax-Element-160">
 [p_x,p_y] = \arg \max\mathbf y'
 </script></p>
 <p><strong>4. Kernel</strong><br>
-<script type="math/tex; mode=display" id="MathJax-Element-73">
+<script type="math/tex; mode=display" id="MathJax-Element-161">
 \kappa(\mathbf x, \mathbf x') = h(||\mathbf x - \mathbf x'||^2)
 =h(||\mathbf x||^2 +||\mathbf x'||^2 - 2\mathbf x^T\mathbf x' )
 </script><br>
-<script type="math/tex; mode=display" id="MathJax-Element-74">
+<script type="math/tex; mode=display" id="MathJax-Element-162">
 =h(||\mathbf x||^2 +||\mathbf x'||^2 - 2\mathcal F^{-1} (\mathcal F({\mathbf x}) \odot \mathcal F({\mathbf x'}) )
 </script></p>
 <p><strong>5. kernel ridge regression</strong><br>
-<script type="math/tex; mode=display" id="MathJax-Element-75">
+<script type="math/tex; mode=display" id="MathJax-Element-163">
 \alpha = (\kappa+ \lambda I)^{-1}\mathbf y
 </script></p>
 <blockquote>
@@ -127,11 +127,11 @@ corr(\mathbf x, \mathbf y)  = \mathcal F( \tilde {\mathbf x})\odot  \mathcal F(\
 </blockquote>
 <ul>
 <li><strong>Training:</strong><br>
-<script type="math/tex; mode=display" id="MathJax-Element-76">
+<script type="math/tex; mode=display" id="MathJax-Element-164">
 \alpha = \mathcal F^{-1}(\frac{\mathcal F(\mathbf y)}{\mathcal F(\kappa (\mathbf x, \mathbf x)) + \lambda})
 </script></li>
 <li><strong>Prediction:</strong><br>
-<script type="math/tex; mode=display" id="MathJax-Element-77">
+<script type="math/tex; mode=display" id="MathJax-Element-165">
 \hat {\mathbf y} = \mathcal F^{-1}( \mathcal F(\kappa(\mathbf x, \mathbf x')) \odot \mathcal F(\alpha))
 </script></li>
 </ul>
@@ -151,7 +151,7 @@ corr(\mathbf x, \mathbf y)  = \mathcal F( \tilde {\mathbf x})\odot  \mathcal F(\
 	state<span class="token punctuation">.</span>yf <span class="token operator">=</span> <span class="token function">fft2</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <ol start="2">
-<li><script type="math/tex" id="MathJax-Element-78">\mathcal F(\kappa(\mathbf x, \mathbf x))</script></li>
+<li><script type="math/tex" id="MathJax-Element-166">\mathcal F(\kappa(\mathbf x, \mathbf x))</script></li>
 </ol>
 <pre class=" language-matlab"><code class="prism  language-matlab">        x <span class="token operator">=</span> <span class="token function">get_region</span><span class="token punctuation">(</span>im<span class="token punctuation">,</span> state<span class="token punctuation">)</span><span class="token punctuation">;</span>
         x <span class="token operator">=</span> <span class="token function">double</span><span class="token punctuation">(</span><span class="token function">fhog</span><span class="token punctuation">(</span><span class="token function">single</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">255</span><span class="token punctuation">,</span> state<span class="token punctuation">.</span>cell_size<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">x</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -171,12 +171,12 @@ corr(\mathbf x, \mathbf y)  = \mathcal F( \tilde {\mathbf x})\odot  \mathcal F(\
 <span class="token keyword">end</span>
 </code></pre>
 <ol start="3">
-<li><script type="math/tex" id="MathJax-Element-79">\alpha</script></li>
+<li><script type="math/tex" id="MathJax-Element-167">\alpha</script></li>
 </ol>
 <pre class=" language-matlab"><code class="prism  language-matlab">    	new_alphaf <span class="token operator">=</span> state<span class="token punctuation">.</span>yf <span class="token operator">./</span><span class="token punctuation">(</span>kf <span class="token operator">+</span> <span class="token number">0.0001</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 </code></pre>
 <ol start="4">
-<li><script type="math/tex" id="MathJax-Element-80">\mathcal F(\kappa(\mathbf x, \mathbf x'))</script></li>
+<li><script type="math/tex" id="MathJax-Element-168">\mathcal F(\kappa(\mathbf x, \mathbf x'))</script></li>
 </ol>
 <pre class=" language-matlab"><code class="prism  language-matlab">	<span class="token comment" spellcheck="true">% next  frame</span>
     x <span class="token operator">=</span> <span class="token function">get_region</span><span class="token punctuation">(</span>im<span class="token punctuation">,</span> state<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -188,7 +188,7 @@ corr(\mathbf x, \mathbf y)  = \mathcal F( \tilde {\mathbf x})\odot  \mathcal F(\
 <pre class=" language-matlab"><code class="prism  language-matlab">	state<span class="token punctuation">.</span>z <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> interp_factor<span class="token punctuation">)</span> <span class="token operator">*</span> state<span class="token punctuation">.</span>z <span class="token operator">+</span> interp_factor <span class="token operator">*</span> xf<span class="token punctuation">;</span>
 </code></pre>
 <ol start="5">
-<li><script type="math/tex" id="MathJax-Element-81">[p_x,p_y] = \arg \max \hat{\mathbf y},</script></li>
+<li><script type="math/tex" id="MathJax-Element-169">[p_x,p_y] = \arg \max \hat{\mathbf y},</script></li>
 </ol>
 <pre class=" language-matlab"><code class="prism  language-matlab">	response <span class="token operator">=</span> <span class="token function">real</span><span class="token punctuation">(</span><span class="token function">ifft2</span><span class="token punctuation">(</span>state<span class="token punctuation">.</span>alphaf <span class="token operator">.*</span> kf<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
     <span class="token punctuation">[</span>yc<span class="token punctuation">,</span> xc<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>response <span class="token operator">==</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token function">response</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -237,9 +237,9 @@ corr(\mathbf x, \mathbf y)  = \mathcal F( \tilde {\mathbf x})\odot  \mathcal F(\
 <img src="KernelCorrelationFilter/dsst4.png" alt=""></p>
 <h3 id="scale-estimation">Scale Estimation</h3>
 <ul>
-<li>object size : <script type="math/tex" id="MathJax-Element-82">P\times R</script></li>
-<li>scales: <script type="math/tex" id="MathJax-Element-83">n \in \{ \lfloor -\frac{s-1}{2} \rfloor, \cdots,\lfloor \frac{s-1}{2} \rfloor \}</script></li>
-<li>patch <script type="math/tex" id="MathJax-Element-84">J_n</script> size: <script type="math/tex" id="MathJax-Element-85">a^n P \times a^nR</script> :Scale increment factor</li>
+<li>object size : <script type="math/tex" id="MathJax-Element-170">P\times R</script></li>
+<li>scales: <script type="math/tex" id="MathJax-Element-171">n \in \{ \lfloor -\frac{s-1}{2} \rfloor, \cdots,\lfloor \frac{s-1}{2} \rfloor \}</script></li>
+<li>patch <script type="math/tex" id="MathJax-Element-172">J_n</script> size: <script type="math/tex" id="MathJax-Element-173">a^n P \times a^nR</script> :Scale increment factor</li>
 </ul>
 <p><strong>Step1: scales setting</strong></p>
 <pre class=" language-matlab"><code class="prism  language-matlab">nScales<span class="token operator">=</span> <span class="token number">33</span><span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">% number of scale levels (denoted "S" in the paper)</span>
@@ -248,7 +248,7 @@ scale_step <span class="token operator">=</span> <span class="token number">1.02
 ss <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span>nScales<span class="token punctuation">;</span>
 scaleFactors <span class="token operator">=</span> scale_step<span class="token operator">.^</span><span class="token punctuation">(</span><span class="token function">ceil</span><span class="token punctuation">(</span>nScales<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">-</span> ss<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>**Step2: expected scale respons <script type="math/tex" id="MathJax-Element-86">\mathbf y</script>**</p>
+<p>**Step2: expected scale respons <script type="math/tex" id="MathJax-Element-174">\mathbf y</script>**</p>
 <pre class=" language-matlab"><code class="prism  language-matlab"><span class="token comment" spellcheck="true">% desired scale filter output (gaussian shaped), bandwidth proportional to</span>
 <span class="token comment" spellcheck="true">% number of scales</span>
 scale_sigma <span class="token operator">=</span> nScales<span class="token operator">/</span><span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token number">33</span><span class="token punctuation">)</span> <span class="token operator">*</span> scale_sigma_factor<span class="token punctuation">;</span>
@@ -293,14 +293,14 @@ nScales <span class="token operator">=</span> <span class="token function">lengt
     <span class="token function">out</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span>s<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">temp</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">scale_window</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">end</span>
 </code></pre>
-<p>**step4:  计算<script type="math/tex" id="MathJax-Element-87">\alpha</script>**</p>
+<p>**step4:  计算<script type="math/tex" id="MathJax-Element-175">\alpha</script>**</p>
 <pre class=" language-matlab"><code class="prism  language-matlab">	 xs <span class="token operator">=</span> <span class="token function">get_scale_sample</span><span class="token punctuation">(</span>im<span class="token punctuation">,</span> pos<span class="token punctuation">,</span> base_target_sz<span class="token punctuation">,</span> currentScaleFactor <span class="token operator">*</span> scaleFactors<span class="token punctuation">,</span> scale_window<span class="token punctuation">,</span> scale_model_sz<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">% calculate the scale filter update</span>
     xsf <span class="token operator">=</span> <span class="token function">fft</span><span class="token punctuation">(</span>xs<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     new_sf_num <span class="token operator">=</span> <span class="token function">bsxfun</span><span class="token punctuation">(</span><span class="token operator">@</span>times<span class="token punctuation">,</span> ysf<span class="token punctuation">,</span> <span class="token function">conj</span><span class="token punctuation">(</span>xsf<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     new_sf_den <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span>xsf <span class="token operator">.*</span> <span class="token function">conj</span><span class="token punctuation">(</span>xsf<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>**Step5: Prediction <script type="math/tex" id="MathJax-Element-88">\mathbf y'</script>**</p>
+<p>**Step5: Prediction <script type="math/tex" id="MathJax-Element-176">\mathbf y'</script>**</p>
 <pre class=" language-matlab"><code class="prism  language-matlab">	 <span class="token comment" spellcheck="true">% extract the test sample feature map for the scale filter</span>
         xs <span class="token operator">=</span> <span class="token function">get_scale_sample</span><span class="token punctuation">(</span>im<span class="token punctuation">,</span> pos<span class="token punctuation">,</span> base_target_sz<span class="token punctuation">,</span> currentScaleFactor <span class="token operator">*</span> scaleFactors<span class="token punctuation">,</span> scale_window<span class="token punctuation">,</span> scale_model_sz<span class="token punctuation">)</span><span class="token punctuation">;</span>        
         <span class="token comment" spellcheck="true">% calculate the correlation response of the scale filter</span>
