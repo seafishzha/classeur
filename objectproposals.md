@@ -147,6 +147,7 @@ Method：<br>
 </ol>
 <blockquote>
 <p>G. Zhu, F. Porikli, and H. Li, “Robust visual tracking with deep convolutional neural network based object proposals on PETS,” in IEEE Conference on Computer Vision and Pattern Recognition Workshop (CVPRW), 2016.<br>
+
 <a href="http://120.52.73.10/www.cv-foundation.org/openaccess/content_cvpr_2016_workshops/w20/papers/Zhu_Robust_Visual_Tracking_CVPR_2016_paper.pdf">Paper:</a><br>
 <img src="https://static.wixstatic.com/media/482d38_a6691fc90ee84b6ea75de13953d2190e.jpg/v1/fill/w_247,h_106,al_c,q_80,usm_0.66_1.00_0.01/482d38_a6691fc90ee84b6ea75de13953d2190e.jpg" alt=""></p>
 </blockquote>
