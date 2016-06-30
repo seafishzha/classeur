@@ -5,7 +5,7 @@
 Neelima Chavali, Harsh Agrawal, Aroma Mahendru, Dhruv Batra @[CVPR2016]<br>
 评估框架：Matlab code [github:] (<a href="https://github.com/batra-mlp-lab/object-proposals">https://github.com/batra-mlp-lab/object-proposals</a>)</li>
 <li>What makes for effective detection proposals?,J. Hosang, R. Benenson, Piotr Dollár, B. Schiele,  BMVC2014, PAMI2015<br>
-Matlab Code: <a href="https://github.com/hosang/detection-proposals">github:</a></li>
+Matlab Code: <a href="https://github.com/hosang/detection-proposals">github</a></li>
 </ol>
 <h2 id="selective-search-for-object-recognition">Selective Search for Object Recognition</h2>
 <p><a href="http://koen.me/research/selectivesearch/">project:</a><br>
@@ -131,5 +131,14 @@ Year = {2015}<br>
 <li><a href="http://arxiv.org/abs/1501.00909">Adaptive Objectness for Object Tracking</a><br>
 IDEA：利用bing特征online训练SVM分类器，对目标进行跟踪。<br>
 疑问：bing特征本来是用来学习目标与非目标的轮廓，表征能力较弱，直接用来跟踪的话，很难区分目标和背景。</li>
-<li></li>
+<li>Beyond Local Search: Tracking Objects Everywhere with Instance-Specific Proposals<br>
+<a href="https://arxiv.org/abs/1605.01839">arxiv: PDF</a>
+<blockquote>
+<p>G. Zhu, F. Porikli, and H. Li, “Beyond local search: Tracking objects everywhere with Instance-specic proposals,” in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016.</p>
+</blockquote>
+</li>
 </ol>
+<p><img src="https://static.wixstatic.com/media/482d38_9492cc3ff82c48d29c9f41abd0472e6d.jpg/v1/fill/w_247,h_101,al_c,q_80,usm_0.66_1.00_0.01/482d38_9492cc3ff82c48d29c9f41abd0472e6d.jpg" alt=""><br>
+Method：<br>
+	- 利用EdgeBox或者BING在整副图像上，提取可能是目标的区域；<br>
+	- 利用2640-D的直方图作为特征，利用structure SVM进行分类。</p>
