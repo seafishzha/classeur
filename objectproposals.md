@@ -141,4 +141,14 @@ IDEA：利用bing特征online训练SVM分类器，对目标进行跟踪。<br>
 <p><img src="https://static.wixstatic.com/media/482d38_9492cc3ff82c48d29c9f41abd0472e6d.jpg/v1/fill/w_247,h_101,al_c,q_80,usm_0.66_1.00_0.01/482d38_9492cc3ff82c48d29c9f41abd0472e6d.jpg" alt=""><br>
 Method：<br>
 	- 利用EdgeBox或者BING在整副图像上，提取可能是目标的区域；<br>
-	- 利用2640-D的直方图作为特征，利用structure SVM进行分类。</p>
+	- 利用2640-D的直方图作为特征，利用Structure SVM进行分类。</p>
+<ol start="3">
+<li>Robust visual tracking with deep convolutional neural network based object proposals on PETS</li>
+</ol>
+<blockquote>
+<p>G. Zhu, F. Porikli, and H. Li, “Robust visual tracking with deep convolutional neural network based object proposals on PETS,” in IEEE Conference on Computer Vision and Pattern Recognition Workshop (CVPRW), 2016.<br>
+<a href="http://120.52.73.10/www.cv-foundation.org/openaccess/content_cvpr_2016_workshops/w20/papers/Zhu_Robust_Visual_Tracking_CVPR_2016_paper.pdf">Paper:</a><br>
+<img src="https://static.wixstatic.com/media/482d38_a6691fc90ee84b6ea75de13953d2190e.jpg/v1/fill/w_247,h_106,al_c,q_80,usm_0.66_1.00_0.01/482d38_a6691fc90ee84b6ea75de13953d2190e.jpg" alt=""></p>
+</blockquote>
+<p>Method:<br>
+利用Faster R-CNN中的 RPN网络获得object proposals， 然后在进行跟踪。</p>
