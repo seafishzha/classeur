@@ -36,12 +36,14 @@ IEEE International Conference on Computer Vision, 2011</p>
 <li>区域合并：多样化策略
 <ul>
 <li>颜色空间</li>
-<li>相似度度量<br>
-<img src="http://img.blog.csdn.net/20140917092806522?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3VyZ2V3b25n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></li>
+<li>相似度度量</li>
 </ul>
 </li>
 </ul>
 </li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20140917092806522?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3VyZ2V3b25n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt=""></p>
+<ol start="4">
 <li>物体识别：
 <ul>
 <li>特征提取：HOG（Histograms of oriented gradients）和 bag-of-words</li>
