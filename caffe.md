@@ -1,75 +1,116 @@
-<h1 id="caffe-使用">Caffe 使用</h1>
-<h2 id="ubuntu">Ubuntu</h2>
-<h3 id="ubuntu-安装-caffe">ubuntu 安装 caffe</h3>
-<p><a href="http://coldmooon.github.io/2015/08/03/caffe_install/">从零安装caffe（ubuntu4.04）</a></p>
-<p>注意事项：</p>
+<h1 id="caffe--安装与使用">Caffe  安装与使用</h1>
 <ol>
-<li>GPU使用</li>
-<li>matlab 路径</li>
-<li>python 路径</li>
-<li>Make 的使用 <code>make all -j8``make test -j8</code></li>
-<li>g++降级：
+<li>虚拟机Ubuntu14.04： CPU without GPU</li>
+</ol>
+<hr>
+<p><a href="http://suanfazu.com/t/caffe/13577">Caffe上手教程:</a></p>
+<p><a href="http://suanfazu.com/t/ubuntu-14-04-caffe/447">在Ubuntu 14.04上安装Caffe:</a></p>
+<ol>
+<li>安装依赖</li>
+</ol>
+<pre><code>sudo apt-get install libatlas-base-dev
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler
+</code></pre>
+<ol start="2">
+<li>安装Caffe</li>
+</ol>
+<pre><code>git clone https://github.com/BVLC/caffe.git
+cd caffe
+cp Makefile.config.example Makefile.config
+</code></pre>
+<ol start="3">
+<li>选择只用CPU（不用GPU）计算</li>
+</ol>
+<pre><code>vi Makefile.config
+# Adjust Makefile.config (for example, if using Anaconda Python)
+# uncomment CPU_ONLY := 1
+</code></pre>
+<p>注意事项：<br>
+- GPU使用<br>
+- matlab 路径<br>
+- python 路径</p>
+<ol start="4">
+<li>最后编译</li>
+</ol>
+<pre><code>make all
+make matcaffe
+make pycaffe
+</code></pre>
+<ol start="5">
+<li>测试（可选）</li>
+</ol>
+<pre><code>make test
+make runtest
+</code></pre>
+<p>error:``</p>
+<ol start="6">
+<li>使用Caffe: 跑MNIST试试</li>
+</ol>
+<pre><code>cd caffe
+sh data/mnist/get_mnist.sh
+sh examples/mnist/create_mnist.sh
+vi examples/mnist/lenet_solver.prototxt
+# 修改 solver_mode 为 CPU
+./examples/mnist/train_lenet.sh
+</code></pre>
+<hr>
+<ol start="2">
+<li>Ubuntu14.04  with GPU</li>
+</ol>
+<hr>
+<p><a href="http://caffe.berkeleyvision.org/install_apt.html">官方网站：</a></p>
+<p><a href="http://coldmooon.github.io/2015/08/03/caffe_install/">从零安装caffe（ubuntu4.04）</a></p>
+<hr>
+<h3 id="matcaffe-使用">MatCaffe 使用</h3>
+<ol start="6">
+<li>下载库：在<a href="https://github.com/BVLC/caffe">github</a>对应的<code>model</code>中链接</li>
+<li>read image:</li>
+</ol>
+<pre><code>im = imred('caffe/examples/images/cap.jpg');
+[scores, maxlabel] = classification_demo(im, 0);
+</code></pre>
+<p>workspace</p>
+<pre><code>Elapsed time is 0.015581 seconds
+Elapsed time is 1.274006 seconds
+</code></pre>
+<hr>
+<blockquote>
+<p><code>classification_demo</code></p>
+</blockquote>
+<hr>
+<ol start="8">
+<li>data:
 <ul>
-<li>下载gcc/g++ 4.7.x<br>
-<code>$ sudo apt-get install -y gcc-4.7</code><br>
-<code>$ sudo apt-get install -y g++-4.7</code><br>
-`- 链接gcc/g++实现降级</li>
+<li>matlab: height * width *chanels(RGB)</li>
+<li>caffe: [width * height * channels(BGR)*images]</li>
+<li>code:</li>
 </ul>
 </li>
 </ol>
-<pre><code>	$ cd /usr/bin
-	$ sudo rm gcc
-	$ sudo ln -s gcc-4.7 gcc
-	$ sudo rm g++
-	$ sudo ln -s g++-4.7 g++
-	``
+<pre class=" language-matlab"><code class="prism  language-matlab">	
+	im_data <span class="token operator">=</span> <span class="token function">im</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">% permute channels from RGB to BGR</span>
+	im_data <span class="token operator">=</span> <span class="token function">permute</span><span class="token punctuation">(</span>im_data<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">% flip width and height</span>
+	im_data <span class="token operator">=</span> <span class="token function">single</span><span class="token punctuation">(</span>im_data<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">% convert from uint8 to single</span>
 
-
------------------------
-### MatCaffe 使用
-6. 下载库：在[github](https://github.com/BVLC/caffe)对应的`model`中链接
-7. read image: 
-</code></pre>
-<p>im = imred(‘caffe/examples/images/cap.jpg’);<br>
-[scores, maxlabel] = classification_demo(im, 0);</p>
-<pre><code>workspace 
-</code></pre>
-<p>Elapsed time is 0.015581 seconds<br>
-Elapsed time is 1.274006 seconds</p>
-<pre><code>
-------------------------
-&gt;`classification_demo`
-
--------------------
-8. data:
-	- matlab: height * width *chanels(RGB)
-	- caffe: [width * height * channels(BGR)*images]
-	- code:
-	
-```matlab
-	
-	im_data = im(:, :, [3, 2, 1]);  % permute channels from RGB to BGR
-	im_data = permute(im_data, [2, 1, 3]);  % flip width and height
-	im_data = single(im_data);  % convert from uint8 to single
-
-	%% resize + oversample
-	im_data = imresize(im_data, [IMAGE_DIM IMAGE_DIM], 'bilinear');  % resize im_data
-	im_data = im_data - mean_data;  % subtract mean_data (already in W x H x C, BGR)
-	% oversample (4 corners, center, and their x-axis flips)
-	crops_data = zeros(CROPPED_DIM, CROPPED_DIM, 3, 10, 'single');
-	indices = [0 IMAGE_DIM-CROPPED_DIM] + 1;
-	n = 1;
-	for i = indices
-	  for j = indices
-	    crops_data(:, :, :, n) = im_data(i:i+CROPPED_DIM-1, j:j+CROPPED_DIM-1, :);
-	    crops_data(:, :, :, n+5) = crops_data(end:-1:1, :, :, n);
-	    n = n + 1;
-	  end
-	end
-	center = floor(indices(2) / 2) + 1;
-	crops_data(:,:,:,5) = ...
-	  im_data(center:center+CROPPED_DIM-1,center:center+CROPPED_DIM-1,:);
-	crops_data(:,:,:,10) = crops_data(end:-1:1, :, :, 5);
+	<span class="token comment" spellcheck="true">%% resize + oversample</span>
+	im_data <span class="token operator">=</span> <span class="token function">imresize</span><span class="token punctuation">(</span>im_data<span class="token punctuation">,</span> <span class="token punctuation">[</span>IMAGE_DIM IMAGE_DIM<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'bilinear'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">% resize im_data</span>
+	im_data <span class="token operator">=</span> im_data <span class="token operator">-</span> mean_data<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">% subtract mean_data (already in W x H x C, BGR)</span>
+	<span class="token comment" spellcheck="true">% oversample (4 corners, center, and their x-axis flips)</span>
+	crops_data <span class="token operator">=</span> <span class="token function">zeros</span><span class="token punctuation">(</span>CROPPED_DIM<span class="token punctuation">,</span> CROPPED_DIM<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">'single'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	indices <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span> IMAGE_DIM<span class="token operator">-</span>CROPPED_DIM<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	n <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span> <span class="token number">i</span> <span class="token operator">=</span> indices
+	  <span class="token keyword">for</span> <span class="token number">j</span> <span class="token operator">=</span> indices
+	    <span class="token function">crops_data</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">im_data</span><span class="token punctuation">(</span><span class="token number">i</span><span class="token operator">:</span><span class="token number">i</span><span class="token operator">+</span>CROPPED_DIM<span class="token number">-1</span><span class="token punctuation">,</span> <span class="token number">j</span><span class="token operator">:</span><span class="token number">j</span><span class="token operator">+</span>CROPPED_DIM<span class="token number">-1</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	    <span class="token function">crops_data</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">,</span> n<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">crops_data</span><span class="token punctuation">(</span><span class="token keyword">end</span><span class="token operator">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	    n <span class="token operator">=</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	  <span class="token keyword">end</span>
+	<span class="token keyword">end</span>
+	center <span class="token operator">=</span> <span class="token function">floor</span><span class="token punctuation">(</span><span class="token function">indices</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token function">crops_data</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">...</span>
+	  <span class="token function">im_data</span><span class="token punctuation">(</span>center<span class="token operator">:</span>center<span class="token operator">+</span>CROPPED_DIM<span class="token number">-1</span><span class="token punctuation">,</span>center<span class="token operator">:</span>center<span class="token operator">+</span>CROPPED_DIM<span class="token number">-1</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">crops_data</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">crops_data</span><span class="token punctuation">(</span><span class="token keyword">end</span><span class="token operator">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">,</span> <span class="token operator">:</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <ol start="10">
 <li>network:
