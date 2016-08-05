@@ -10,9 +10,24 @@
 </ul>
 <hr>
 <h2 id="detection-1">Detection</h2>
+<hr>
+<h2 id="unitbox-an-advanced-object-detection-networkacmmm2016">UnitBox: An Advanced Object Detection Network(ACMMM2016)</h2>
+<p>pdf: <a href="http://128.84.21.199/pdf/1608.01471v1.pdf">http://128.84.21.199/pdf/1608.01471v1.pdf</a><br>
+method: Intersection over Union (IoU) loss function + FCN<br>
+to do :  <strong>2.3 IoU Loss Layer: Backward</strong></p>
 <h3 id="r-fcn-object-detection-via-region-based-fully-convolutional-networks">R-FCN: Object Detection via Region-based Fully Convolutional Networks</h3>
-<p>homepage:<a href="http://kaiminghe.com/">http://kaiminghe.com/</a><br>
-github:<a href="https://github.com/daijifeng001/r-fcn">https://github.com/daijifeng001/r-fcn</a></p>
+<ul>
+<li>homepage:<a href="http://kaiminghe.com/">http://kaiminghe.com/</a></li>
+<li>github:<a href="https://github.com/daijifeng001/r-fcn">https://github.com/daijifeng001/r-fcn</a></li>
+<li>contribution: our region-based detector is fully convolutional with almost all computation shared on the entire image.</li>
+<li>method:</li>
+<li>experiments:
+<ul>
+<li>performance :  83.6% mAP on the 2007 set</li>
+<li>speed: 170ms per image, 2.5-20x faster than the Faster R-CNN counterpart</li>
+</ul>
+</li>
+</ul>
 <hr>
 <h3 id="faster-r-cnn">faster R-CNN:</h3>
 <ul>
