@@ -330,6 +330,13 @@ in IEEE International Conference on Image Processing (ICIP), 2015. (Top 10% Pape
 <p>Yuankai Qi, Shengping Zhang, Lei Qin, Hongxun Yao, Qingming Huang, Jongwoo Lim, Ming-Hsuan Yang.<br>
 <img src="https://sites.google.com/site/yuankiqi/_/rsrc/1460602884304/hdt/hdt.png" alt=""></p>
 <p>对每一层的特征作KCF，然后将结果Ensemble起来，这里他是用hedged（K. Chaudhuri, Y. Freund, and D. Hsu. A parameter-free hedging algorithm. In NIPS, 2009.）的集成方法。</p>
+<hr>
+<h2 id="learning-by-tracking-siamese-cnn-for-robust-target-associationarxiv1604.07866">Learning by tracking: Siamese CNN for robust target association(arXiv:1604.07866)</h2>
+<ul>
+<li>pdf: <a href="https://arxiv.org/pdf/1604.07866v3.pdf">https://arxiv.org/pdf/1604.07866v3.pdf</a></li>
+<li>method :  Siamese convolutional neural network (CNN) -&gt; gradient boosting<br>
+<img src="https://arxiv.org/pdf/1604.07866v3.pdf" alt=""></li>
+</ul>
 <h2 id="template-update"><strong>Template Update</strong></h2>
 <h3 id="real-time-tracking-with-detection-for-coping-with-view-point-change-pdf-bib">Real Time Tracking-With-Detection for Coping with View Point Change PDF BIB</h3>
 <p>Shaul Oron, Aharon Bar-Hillel, Shai Avidan<br>
