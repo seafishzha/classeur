@@ -1,5 +1,6 @@
 <h1 id="single-tracking-paper-and-codes">Single Tracking Paper and Codes</h1>
-<div class="toc"><ul><li><a href="#single-tracking-paper-and-codes">Single Tracking Paper and Codes</a><ul><li><a href="#survey">Survey</a><ul><li><a href="#understanding-and-diagnosing-visual-tracking-systems-iccv2015">Understanding and Diagnosing Visual Tracking Systems (ICCV2015)</a></li></ul></li><li><a href="#kernel-correlation-filter-tracking">Kernel Correlation Filter Tracking</a><ul><li></li><li><a href="#staple-complementary-learners-for-real-time-tracking">Staple: Complementary Learners for Real-Time Tracking</a></li></ul></li><li><a href="#template----sparse">Template  +  Sparse</a><ul><li><a href="#least-soft-threshold-squares-tracking">Least Soft-threshold Squares Tracking</a></li><li><a href="#robust-object-tracking-via-sparsity-based-collaborative-model">Robust Object Tracking via Sparsity-based Collaborative Model</a></li><li><a href="#visual-tracking-via-adaptive-structural-local-sparse-appearance-model">Visual Tracking via Adaptive Structural Local Sparse Appearance Model</a></li><li><a href="#online-discriminative-object-tracking-with-local-sparse-representation">Online Discriminative Object Tracking with Local Sparse Representation</a></li></ul></li><li><a href="#patch--nn">Patch + NN</a><ul><li><a href="#best-buddies-similarity-for-robust-template-matching-pdf-bib">Best Buddies Similarity for Robust Template Matching PDF BIB</a></li><li><a href="#approximate-nearest-neighbor-fields-in-video">Approximate Nearest Neighbor Fields in Video</a></li><li><a href="#learning-to-compare-image-patches-via-convolutional-neural-networks">Learning to Compare Image Patches via Convolutional Neural Networks</a></li><li><a href="#visual-tracking-using-pertinent-patch-selection-and-masking">Visual Tracking Using Pertinent Patch Selection and Masking</a></li></ul></li><li><a href="#color----histogram">Color  +  Histogram</a><ul><li><a href="#in-defense-of-color-based-model-free-tracking">In Defense of Color-based Model-free Tracking</a></li><li><a href="#visual-tracking-via-locality-sensitive-histograms">Visual Tracking via Locality Sensitive Histograms</a></li><li><a href="#dirichlet-based-histogram-feature-transform-for-image-classification">Dirichlet-based Histogram Feature Transform for Image Classification,</a></li></ul></li><li><a href="#motion--context">Motion + Context</a><ul><li><a href="#robust-online-learned-spatio-temporal-context-model-for-visual-tracking">Robust Online Learned Spatio-Temporal Context Model for Visual Tracking,</a></li><li><a href="#robust-deformable-and-occluded-object-tracking-with-dynamic-graph">Robust Deformable and Occluded Object Tracking with Dynamic Graph,</a></li><li><a href="#extended-lucas-kanade-tracking">Extended Lucas-Kanade Tracking</a></li></ul></li><li><a href="#patch--boosting">Patch + Boosting</a><ul><li><a href="#real-time-compressive-tracking">Real-Time Compressive Tracking</a></li><li><a href="#online-multiple-support-instance-tracking">Online Multiple Support Instance Tracking</a></li><li><a href="#online-real-time-tracking-using-a-category-to-individual-detector">Online, Real-Time Tracking using a Category-to-Individual Detector</a></li></ul></li><li><a href="#superpixel">Superpixel</a><ul><li><a href="#superpixel-tracking">Superpixel Tracking</a></li><li><a href="#pixeltrack-a-fast-adaptive-algorithm-for-tracking-non-rigid-objects">Pixeltrack: a fast adaptive algorithm for tracking non-rigid objects</a></li><li><a href="#tracking-using-multilevel-quantizations">Tracking using Multilevel Quantizations</a></li></ul></li><li><a href="#dnn">DNN</a><ul><li><a href="#hierarchical-convolutional-features-for-visual-tracking">Hierarchical Convolutional Features for Visual Tracking</a></li><li><a href="#learning-a-temporally-invariant-representation-for-visual-tracking">Learning A Temporally Invariant Representation for Visual Tracking</a></li><li><a href="#stct-sequentially-training-convolutional-networks-for-visual-tracking">STCT: Sequentially Training Convolutional Networks for Visual Tracking</a></li><li><a href="#tracking-with-fully-convolutional-networks">Tracking with Fully Convolutional Networks,</a></li><li><a href="#siamese-instance-search-for-tracking">Siamese Instance Search for Tracking</a></li><li><a href="#hedged-deep-tracking">Hedged Deep Tracking</a></li></ul></li><li><a href="#template-update">Template Update</a><ul><li><a href="#real-time-tracking-with-detection-for-coping-with-view-point-change-pdf-bib">Real Time Tracking-With-Detection for Coping with View Point Change PDF BIB</a></li><li><a href="#scribble-tracker-a-matting-based-approach-for-robust-tracking">Scribble Tracker: A Matting-based Approach for Robust Tracking</a></li></ul></li><li><a href="#descriptor">Descriptor</a><ul><li><a href="#clustering-of-static-adaptive-correspondences-for-deformable-object-tracking">Clustering of Static-Adaptive Correspondences for Deformable Object Tracking</a></li><li><a href="#better-feature-tracking-through-subspace-constraints">Better Feature Tracking Through Subspace Constraints</a></li></ul></li><li><a href="#object-proposals--svm">Object Proposals + SVM</a><ul><li><a href="#struck-structured-output-tracking-with-kernels">Struck: Structured output tracking with kernels,</a></li><li><a href="#beyond-local-search">Beyond local search</a></li><li><a href="#robust-visual-tracking-with-deep-convolutional-neural-network-based-object-proposals-on-pets">Robust Visual Tracking with Deep Convolutional Neural Network based Object Proposals on PETS</a></li><li><a href="#adaptive-objectness-for-object-tracking.">Adaptive Objectness for Object Tracking.</a></li></ul></li><li><a href="#others">Others</a><ul><li><a href="#model-free-tracking.-ieee-transactions-on-pattern-recognition">Model-Free Tracking. IEEE Transactions on Pattern Recognition</a></li><li><a href="#speeding-up-tracking-by-ignoring-features.">Speeding Up Tracking by Ignoring Features.</a></li></ul></li></ul></li></ul></div><h2 id="survey"><strong>Survey</strong></h2>
+<p>[TOC]</p>
+<h2 id="survey"><strong>Survey</strong></h2>
 <h3 id="understanding-and-diagnosing-visual-tracking-systems-iccv2015">Understanding and Diagnosing Visual Tracking Systems (ICCV2015)</h3>
 <pre><code>Naiyan Wangy Jianping Shiz Dit-Yan Yeungy Jiaya Jia
 </code></pre>
@@ -36,9 +37,34 @@ substantially when the constituent trackers have high <strong>diversity</strong>
 </thead>
 <tbody>
 <tr>
-<td>VTB1.0 [39]</td>
+<td><strong>VTB1.0</strong> [39]</td>
 <td>2013</td>
 <td>50</td>
+</tr>
+<tr>
+<td>VTB2.0 [40]</td>
+<td>2015</td>
+<td>100</td>
+</tr>
+<tr>
+<td>VOT2014</td>
+<td>2014</td>
+<td>25</td>
+</tr>
+<tr>
+<td>VOT2015</td>
+<td>2015</td>
+<td>30</td>
+</tr>
+<tr>
+<td><strong>VOT2016</strong></td>
+<td>2016</td>
+<td>60</td>
+</tr>
+<tr>
+<td>NUS-PRO [19]</td>
+<td>2015</td>
+<td>365</td>
 </tr>
 <tr>
 <td>PTB [29]</td>
@@ -49,21 +75,6 @@ substantially when the constituent trackers have high <strong>diversity</strong>
 <td>ALOV++ [28]</td>
 <td>2013</td>
 <td>314</td>
-</tr>
-<tr>
-<td>VOT2014 [18]</td>
-<td>2014</td>
-<td>25</td>
-</tr>
-<tr>
-<td>VTB2.0 [40]</td>
-<td>2015</td>
-<td>100</td>
-</tr>
-<tr>
-<td>NUS-PRO [19]</td>
-<td>2015</td>
-<td>365</td>
 </tr>
 </tbody>
 </table>
@@ -97,7 +108,8 @@ The ensemble post-processor can improve the performance substantially especially
 <li>draw results图。</li>
 </ol>
 </blockquote>
-<pre class=" language-matlab"><code class="prism  language-matlab"><span class="token comment" spellcheck="true">% step0: parameters setting</span>
+<pre class=" language-matlab"><code class="prism  language-matlab">
+<span class="token comment" spellcheck="true">% step0: parameters setting</span>
 globalParam <span class="token operator">=</span> <span class="token function">struct</span><span class="token punctuation">(</span><span class="token punctuation">...</span>
     <span class="token string">'MotionModel'</span><span class="token punctuation">,</span>                  <span class="token operator">@</span>ParticleFilterMotionModel<span class="token punctuation">,</span> <span class="token punctuation">...</span>
     <span class="token string">'FeatureExtractor'</span><span class="token punctuation">,</span>             <span class="token operator">@</span>HogRawPixelNormExtractor<span class="token punctuation">,</span> <span class="token punctuation">...</span>
@@ -186,13 +198,30 @@ results <span class="token operator">=</span> <span class="token function">run_D
 
 </code></pre>
 <h2 id="kernel-correlation-filter-tracking">Kernel Correlation Filter Tracking</h2>
-<h3 id="section"></h3>
-<p>Deformable Parts Correlation Filters for Robust Visual Tracking<br>
-Alan Lukežič, Luka Čehovin, Matej Kristan<br>
+<h3 id="deformable-parts-correlation-filters-for-robust-visual-trackingcvpr2016">Deformable Parts Correlation Filters for Robust Visual Tracking(CVPR2016)</h3>
+<p>Alan Lukežič, Luka Čehovin, Matej Kristan<br>
 针对非刚性和遮挡物体的跟踪问题，首先利用基于颜色的KCF获取目标的初略位置，然后利用中层的patches，分别做KCF，通过最小化能量函数（由各个patches构造），精确定位目标的位置。</p>
 <h3 id="staple-complementary-learners-for-real-time-tracking">Staple: Complementary Learners for Real-Time Tracking</h3>
 <p>Luca Bertinetto, Jack Valmadre, Stuart Golodetz, Ondrej Miksik, Philip H.S. Torr<br>
 <img src="http://www.robots.ox.ac.uk/~luca/stuff/pipeline_horizontal.png" alt=""></p>
+<p>discrator + HOG</p>
+<p>Matlab Code: <a href="https://github.com/bertinetto/staple">github</a></p>
+<hr>
+<h3 id="beyond-correlation-filters-learning-continuous-convolution-operators-for-visual-trackingeccv16">Beyond Correlation Filters: Learning Continuous Convolution Operators for Visual Tracking(ECCV16)</h3>
+<ul>
+<li>ompage:<a href="http://www.cvl.isy.liu.se/research/objrec/visualtracking/conttrack/index.html">http://www.cvl.isy.liu.se/research/objrec/visualtracking/conttrack/index.html</a></li>
+<li>code: to coming</li>
+<li>performance:
+<ul>
+<li>OTB-2015 (+5.1% in mean OP),</li>
+<li>Temple-Color (+4.6% in mean OP)</li>
+<li>VOT2015 (20% relative reduction in failure rate).</li>
+</ul>
+</li>
+<li>speed:</li>
+<li>method:   fusion Deep Features ( magenet-vgg-m-2048 ) for tracking<br>
+<img src="http://www.cvl.isy.liu.se/research/objrec/visualtracking/conttrack/method_fig.jpg" alt=""></li>
+</ul>
 <h2 id="template----sparse"><strong>Template  +  Sparse</strong></h2>
 <h3 id="least-soft-threshold-squares-tracking">Least Soft-threshold Squares Tracking</h3>
 <p>Dong Wang, Huchuan Lu, and Ming-Hsuan Yang<br>
