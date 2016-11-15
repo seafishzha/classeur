@@ -37,6 +37,10 @@ cp Makefile.config.example Makefile.config
 make matcaffe
 make pycaffe
 </code></pre>
+<p>pycaffe 出错，找不见caffe：原因是系统中安装了两个python：</p>
+<pre><code>pip install protobuf
+aconda2/bin/pip protobuf
+</code></pre>
 <ol start="5">
 <li>测试（可选）</li>
 </ol>
